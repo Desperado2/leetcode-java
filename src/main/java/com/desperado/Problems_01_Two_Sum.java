@@ -1,3 +1,7 @@
+package com.desperado;
+
+import org.junit.Test;
+
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
@@ -11,7 +15,7 @@ public class Problems_01_Two_Sum {
      * 数字的下标即可。如果找不到，就把这个数字存⼊ map 中，等待扫到“另⼀半”数字的时候，再取出来返
      * 回结果。
      */
-    private static int[] twoSum(int[] nums, int target){
+    private int[] twoSum(int[] nums, int target){
         Map<Integer,Integer> map = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
             int another = target - nums[i];
@@ -25,7 +29,8 @@ public class Problems_01_Two_Sum {
 
 
     // 测试
-    public static void main(String[] args) {
+    @Test
+    public void test() {
         System.out.println(Arrays.toString(twoSum(new int[]{2, 7, 11, 15}, 9)));
         System.out.println(Arrays.toString(twoSum(new int[]{3, 2, 4}, 6)));
         System.out.println(Arrays.toString(twoSum(new int[]{3, 3}, 6)));
